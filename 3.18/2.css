@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+}
+.page{
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.page-header{
+    width: 100%;
+
+}
+.page-header__pic{
+    width: 100%;
+    height: 200px;
+    background: url(./biaoqingbao1.jpg)no-repeat;
+    background-size: cover;
+}
+.page-header__userinfo{
+    padding: 10px 10px 13px 10px ;
+    position: relative;
+}
+.name{
+    line-height: 1;
+}
+.labels{
+    margin-top: 10px;
+}
+.label{
+    padding: 5px 10px;
+    color: #ffffff;
+    font-size: 14px;
+    border-radius: 5px;
+
+}
+.blue{
+    background-color: #48A6Fd;
+}
+.green{
+    background-color: #1DCA42;
+}
+.orange{
+    background-color: #FB8800;
+}
+ul li{
+    list-style: none;
+}
+.page-header__msg{
+    margin-top: 10px;
+
+}
+.items{
+
+}
+.item{
+    width: 95px;
+    display: inline-block;
+    
+    padding-left: 35px;
+    position: relative;
+
+}
+.city::before{
+    content: "";
+    width: 22px;
+    height: 25px;
+    background: url(./dingwei.png);
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}
+.job::before{
+    content: "";
+    width: 22px;
+    height: 25px;
+    background: url(./zhiye.png);
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.ewm{
+    width: 34px;
+    height: 33px;
+    position: absolute;
+    top: 32px;
+    right: 11px;
+}
+.ewm img{
+    display:block;
+    width: 100%;
+    height: 100%;
+
+
+}
+.envelop{
+    width: 55px;
+    height: 50px;
+    right: 4px;
+    bottom: 0;
+    position: absolute;
+    top: 80px;
+}
+.envelop img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
