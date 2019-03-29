@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const mengge = {
+        msg:'this is 猛哥'
+    }
+    const woniu = {
+        msg:'this is 蜗牛'
+    }
+    function mengge_func(){
+        var arrow_mengge_func = () => {
+            console.log(this);
+            console.log(this.msg);
+        }
+        arrow_mengge_func();
+    }
+    // mengge_func.call(mengge);
+    mengge_func.call(woniu);
+    //
+    // mengge_func.call(lilei);
+    // var arrow_mengge_func= () =>{
+    //     console.log(this)
+    //     console.log(this.msg);
+    // }
+    // arrow_mengge_func.call (lilei);
+    </script>
+</body>
+</html>
