@@ -1,0 +1,71 @@
+html,
+body {
+  height: 100%;
+  background-color: #000;
+  overflow: hidden;
+  
+}
+.g-candle {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+}
+.g-candle .g-body {
+  position: relative;
+  width: 100px;
+  height: 300px;
+  margin: 280px auto;
+  background: linear-gradient(230deg, #006400, #556b2f, #000 70%);
+  z-index: 1;
+}
+.g-candle .g-body:before {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 40px;
+  border-radius: 50%;
+  top: -20px;
+  background: radial-gradient(#006400, #5c2104 45%, #7fff00 100%);
+}
+.g-candle .g-body:after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 48px;
+  left: 50%;
+  top: -22px;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 60%, #fff);
+  opacity: 0.7;
+  filter: blur(1px);
+}
+.g-candle .g-fire-box {
+  position: absolute;
+  top: 97px;
+  left: 50%;
+  width: 80px;
+  height: 200px;
+  transform: translate(-50%, -50%);
+  filter: blur(2px) contrast(5);
+}
+.g-candle .g-fire-box .g-fire {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  border-radius: 45%;
+  border: 120px solid #000;
+  border-bottom-color: transparent;
+  transform: translate(-50%, 0) scaleX(0.45);
+  background-color: #556b2f;
+}
+.g-candle .g-fire-box .g-fire .g-ball {
+  position: absolute;
+  top: 60px;
+  transform: translate(0, 0);
+  background: #fa8763;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  z-index: -1;
+  mix-blend-mode: screen;
+}

@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    color: #111111;
+    background: #fcfcfc;
+}
+body{
+    display:block;
+    padding-top:30px;
+
+}
+body,td,th{
+    font: 12px Helvetica,Arial;
+    line-height:1.62;
+}
+#anony-nav{
+    display:block;
+    width: 950px;
+    margin: 0 auto -25px;
+}
