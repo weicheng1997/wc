@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object</title>
+</head>
+
+<body>
+    <script>
+        const obj = {
+            name: '李雷',
+            age: 32,
+            foo: { bar: 'bar val' },
+            baz: ['Hello',{ msg: 'World'}]
+        }
+        //es5
+        // var name = obj.name, age = obj.age;
+
+        //es6
+        // var hello;
+        const { 
+            age: this_age, //:赋值 此时age赋给this_age,已经没有age这个变量
+            name: this_name, 
+            foo:{ bar },
+            // baz:    //解构一个不存在的值,返回undefined
+            //baz: ['Hello',{ msg: 'World'}]
+            baz: [hello, { msg: world}]
+         } = obj;
+        //const {name,age} = obj;
+    </script>
+</body>
+
+</html>

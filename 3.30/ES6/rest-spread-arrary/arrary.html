@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>arrary</title>
+</head>
+<body>
+
+    <script>
+    const arr = [12,18,30,45];
+    // 返回第一个 如果找不到就undefined
+    const this_age=arr.find(function(age){
+        return age > 180;
+    })
+    //满足条件的所有元素都返回 如果找不到就是[]
+    const this_ages=arr.filter(function(age){
+        return age > 99;
+    })
+    // every 要求每个都     some要求只要有一个就行
+    const this_every = arr.every(age => age >= 18);
+    const this_some = arr.some(age => age < 18);
+    </script>
+</body>
+</html>
