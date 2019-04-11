@@ -19,12 +19,41 @@
     xhr.send()
     // console.log(xhr.responseText)
     // console.log(xhr.readyState,xhr.status)//status 200代表访问成功 500是服务器有问题  readyState 0未初始化 4解析完成从服务器拿到的数据了
-    xhr.onreadystatechange = function(){
+    var p = new Promise((resolve,reject)=>{
+        xhr.onreadystatechange = function(){
         if(xhr.readyState ==4 && xhr.status ==200){
             console.log(xhr.responseText)
+            resolve(xhr.responseText)
         }
     }
-    console.log(12312312)
+    })
+    
+    function xq(){
+        return new Promise((resolve,reject) => {
+            setTimeout(()=>{
+            console.log('猛哥要相亲了')
+            resolve('相亲很顺利')
+        },1000)
+        })
+
+        
+    }
+    // xq()
+    function marry(){
+        setTimeout(()=>{
+            console.log('猛哥结婚了！')
+        },200)
+   
+    }
+    
+    p
+        .then(xq)//p执行完之后执行xq函数
+        .then((e)=>{
+            console.log(e)
+        })
+        .catch(()=>{ 
+            console.log('猛哥出家了')
+        })//p没有执行完则执行catch()
     </script>
 </body>
 </html>
