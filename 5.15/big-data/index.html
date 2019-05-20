@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  .news > div {
+    text-align: center;
+    height: 50px;
+  }
+  </style>
+</head>
+<body>
+  <div class="news"></div>
+  <script>
+    // 只要有length 属性的类数组， Array.from 就能将其转化为数组
+    const originNews = Array.from({
+      length: 10000
+    }, (v, k) => ({content:`新闻${k}`}));
+    const container = document.querySelector('.news');
+    console.log(originNews)
+    let ele = document.createElement('div');
+    for( let item of originNews) {
+      let otherEle = ele.cloneNode(true);
+      ele.innerHTML = item.content
+      container.appendChild(ele)
+    }
+  </script>
+</body>
+</html>
